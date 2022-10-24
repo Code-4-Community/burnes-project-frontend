@@ -1,6 +1,8 @@
 import * as React from "react"
-import SideNav from './newSideNav.js'
-import './App.css'
+// import SideNav from './newSideNav.js'
+// import './App.css'
+import PersistentDrawerLeft from '../components/sidenav';
+import PhaseTimeline from "../components/timeline";
 
 const pageStyles = {
   color: "#232129",
@@ -129,16 +131,17 @@ const IndexPage = () => {
   return (
     
     <main style={pageStyles}>
-      {/* main side navigation bar -> table of contents!! */}
-      <div className = "container">
-        <SideNav name = 'Table of Contents'/>
-      </div>
+       {/* main side navigation bar -> table of contents!! */}
+       {/* <div className = "container"> */}
+         {/* <SideNav name = 'Table of Contents'/> */}
+     {/* </div> */}
       
       <h1 style={headingStyles}>
         Congratulations
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
+
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time. 😎
@@ -171,9 +174,12 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
+      <PersistentDrawerLeft></PersistentDrawerLeft>
       <img
         alt="Gov Lab Logo"
         src="/images/govlablogo.png" width='24' height='24'></img>
+      <PhaseTimeline></PhaseTimeline>
+
     </main>
 
 )}
