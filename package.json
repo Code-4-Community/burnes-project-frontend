@@ -1,0 +1,24 @@
+{
+  "name": "project-burnes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "project-burnes",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.10",
+    "gatsby": "^4.24.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
