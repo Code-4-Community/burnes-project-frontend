@@ -11,7 +11,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prettier": "prettier --write src"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -20,5 +21,11 @@
     "gatsby": "^4.24.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "2.7.1"
   }
 }
