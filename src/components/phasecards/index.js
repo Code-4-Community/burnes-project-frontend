@@ -10,7 +10,7 @@ import { shadows } from '@mui/system';
 
 export default function PhaseCard(props) {
   return (
-    <Card sx={{ minWidth: 275, borderRadius: '16px', boxShadow: 2 }}>
+    <Card sx={{ minWidth: 200, borderRadius: '16px', boxShadow: 2 }}>
       <CardContent>
         <Typography
           variant="h5"

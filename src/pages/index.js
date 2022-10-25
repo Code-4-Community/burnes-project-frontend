@@ -12,7 +12,7 @@ const pageStyles = {
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  maxWidth: 600,
 };
 const headingAccentStyles = {
   color: '#660099',
@@ -136,16 +136,18 @@ const IndexPage = () => {
       {/* </div> */}
 
       <h1 style={headingStyles}>
-        Congratulations
+        The Burnes Center for Social Change
         <br />
         <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
+          City Challenge Playbook
+          <PhaseTimeline></PhaseTimeline>
         </span>
       </h1>
+      {/* <PhaseTimeline></PhaseTimeline> */}
 
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
+        {/* Edit <code style={codeStyles}>src/pages/index.js</code> to see this page */}
+        {/* update in real-time. 😎 */}
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
@@ -182,7 +184,7 @@ const IndexPage = () => {
         width="24"
         height="24"
       ></img>
-      <PhaseTimeline></PhaseTimeline>
+      {/* <PhaseTimeline></PhaseTimeline> */}
     </main>
   );
 };
