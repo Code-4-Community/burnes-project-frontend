@@ -18,13 +18,4 @@
   flex-wrap: wrap;
 }
 
-.child {
-  display: inline-block;
-}
 
-.grid-container-element { 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-gap: 20px; 
-  width: 50%; 
-}
