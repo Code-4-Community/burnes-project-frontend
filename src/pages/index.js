@@ -21,6 +21,14 @@ const rightBlurbs = {
   color: '#660099',
 };
 
+const phaseCardsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  columnGap: '20px'
+};
+
 
 const IndexPage = () => {
   return (
@@ -37,26 +45,26 @@ const IndexPage = () => {
         </h2>
       </h1>
 
-      <div classname = 'grid-container-element'>
-        <div classname = 'child'>
+      <div style={phaseCardsContainer}>
+        <div classname = 'phase-card'>
           <MediaCard props={{title: 'PROBLEM DEFINITION', desc: 'Training for public servants in defining problems with data and evidence'}}></MediaCard>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
           <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
         <MediaCard props={{title: 'OPEN CHALLENGE', desc: 'Training for public servants in defining problems with data and evidence'}}></MediaCard>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
         <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
         <MediaCard props={{title: 'CO-DESIGN', desc: 'A coaching program for residents and public servants to develop those solutions collaboratively'}}></MediaCard>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
         <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
         </div>
-        <div classname = 'child'>
+        <div classname = 'phase-card'>
         <MediaCard props={{title: 'IMPLEMENTATION', desc: 'Support for cities to implement the innovative new policy or service'}}></MediaCard>
         </div>
       </div>
