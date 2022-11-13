@@ -5,6 +5,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineDot from '@mui/lab/TimelineDot';
 import PhaseCard from '../phasecards';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function PhaseTimeline() {
   return (
@@ -14,9 +15,6 @@ export default function PhaseTimeline() {
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <PhaseCard title={'Phase 1'} desc={'Problem Definition'}>
-          {' '}
-        </PhaseCard>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>

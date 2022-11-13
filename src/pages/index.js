@@ -1,8 +1,7 @@
 import * as React from 'react';
-// import SideNav from './newSideNav.js'
-// import './App.css'
 import PersistentDrawerLeft from '../components/sidenav';
-import PhaseTimeline from '../components/timeline';
+import MediaCard from '../components/flipcard';
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 
 const pageStyles = {
   color: '#232129',
@@ -12,169 +11,57 @@ const pageStyles = {
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  maxWidth: 800,
 };
-const headingAccentStyles = {
+const rightBlurbs = {
+  position: 'relative',
+  left: '525px',
+  top: '-30px',
+  fontSize: '20px',
   color: '#660099',
 };
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
 
-const linkStyle = {
-  color: '#8954A8',
-  fontWeight: 'bold',
-  fontSize: 16,
-  verticalAlign: '5%',
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: 'none',
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: '#232129',
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLink = {
-  text: 'Documentation',
-  url: 'https://www.gatsbyjs.com/docs/',
-  color: '#8954A8',
-};
-
-const badgeStyle = {
-  color: '#fff',
-  backgroundColor: '#088413',
-  border: '1px solid #088413',
-  fontSize: 11,
-  fontWeight: 'bold',
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: '4px 6px',
-  display: 'inline-block',
-  position: 'relative',
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-const links = [
-  {
-    text: 'hey ver',
-    url: 'https://www.gatsbyjs.com/docs/tutorial/',
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: '#E95800',
-  },
-  {
-    text: 'How to Guides',
-    url: 'https://www.gatsbyjs.com/docs/how-to/',
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: '#1099A8',
-  },
-  {
-    text: 'Reference Guides',
-    url: 'https://www.gatsbyjs.com/docs/reference/',
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: '#BC027F',
-  },
-  {
-    text: 'Conceptual Guides',
-    url: 'https://www.gatsbyjs.com/docs/conceptual/',
-    description:
-      'Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.',
-    color: '#0D96F2',
-  },
-  {
-    text: 'Plugin Library',
-    url: 'https://www.gatsbyjs.com/plugins',
-    description:
-      'Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.',
-    color: '#8EB814',
-  },
-  {
-    text: 'Build and Host',
-    url: 'https://www.gatsbyjs.com/cloud',
-    badge: true,
-    description:
-      'Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!',
-    color: '#663399',
-  },
-];
 
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      {/* main side navigation bar -> table of contents!! */}
-      {/* <div className = "container"> */}
-      {/* <SideNav name = 'Table of Contents'/> */}
-      {/* </div> */}
-
       <h1 style={headingStyles}>
-        Congratulations
+        What is a City Challenge?
         <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
+        <h2 style={rightBlurbs}>
+        A City Challenge is a public engagement model in which city leaders and officials work with residents to identify, design and implement resident-designed solutions to some of the city’s most pressing problems.                                                    
+        <h3 style={rightBlurbs}></h3>
+        The goal of a City Challenge is to help a city transition from closed-door to open and collaborative governance, and helps governments and communities co-create implementable solutions to critical local problems in twelve months through a 4-step process. 
+        <h4 style={rightBlurbs}></h4>
+        Unlike a competition alone, problem definition and coaching ensures that solutions are implementable. And, unlike a database of standard solutions, open innovation daws upon the expertise of the community. 
+        </h2>
       </h1>
 
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div classname = 'grid-container-element'>
+        <div classname = 'child'>
+          <MediaCard props={{title: 'PROBLEM DEFINITION', desc: 'Training for public servants in defining problems with data and evidence'}}></MediaCard>
+        </div>
+        <div classname = 'child'>
+          <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
+        </div>
+        <div classname = 'child'>
+        <MediaCard props={{title: 'OPEN CHALLENGE', desc: 'Training for public servants in defining problems with data and evidence'}}></MediaCard>
+        </div>
+        <div classname = 'child'>
+        <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
+        </div>
+        <div classname = 'child'>
+        <MediaCard props={{title: 'CO-DESIGN', desc: 'A coaching program for residents and public servants to develop those solutions collaboratively'}}></MediaCard>
+        </div>
+        <div classname = 'child'>
+        <TrendingFlatIcon sx={{transform: 'scale(2)'}}/>
+        </div>
+        <div classname = 'child'>
+        <MediaCard props={{title: 'IMPLEMENTATION', desc: 'Support for cities to implement the innovative new policy or service'}}></MediaCard>
+        </div>
+      </div>
+      
+
       <PersistentDrawerLeft></PersistentDrawerLeft>
       <img
         alt="Gov Lab Logo"
@@ -182,11 +69,12 @@ const IndexPage = () => {
         width="24"
         height="24"
       ></img>
-      <PhaseTimeline></PhaseTimeline>
     </main>
   );
 };
 
 export default IndexPage;
+
+
 
 export const Head = () => <title>Home Page</title>;

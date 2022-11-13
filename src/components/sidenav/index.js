@@ -16,6 +16,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { alignProperty } from '@mui/material/styles/cssUtils';
+
+const header = {
+  position: 'relative',
+  color: 'red',
+};
+
+const pad = {
+  padding: '200px',
+}
 
 const drawerWidth = 240;
 
@@ -79,20 +89,36 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
+      <AppBar position="fixed" open={open}
+      >
+        
+        <Toolbar
+        style={{background: '#660099'}}
+        >
+          
+
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            padding="500px"
           >
+                                    
             <MenuIcon />
           </IconButton>
+
+          <h1 style={{paddingLeft: '550px'}}>
+        City Challenge Playbook
+        </h1>
+
+
+
           <Typography variant="h6" noWrap component="div">
-            Persistent drawer
+           
           </Typography>
+
         </Toolbar>
       </AppBar>
       <Drawer
@@ -108,6 +134,7 @@ export default function PersistentDrawerLeft() {
         anchor="left"
         open={open}
       >
+       
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? (
@@ -119,7 +146,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['About Us', 'Setting the Groundwork', 'Phase 1: Problem Definition', 'Phase 2: Open Challenge', 'Phase 3: Co-Design', 'Phase 4: Implementation'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon></ListItemIcon>
@@ -128,19 +155,12 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))}
         </List>
-        <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon></ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          
         </List>
       </Drawer>
       <Main open={open}></Main>
     </Box>
+    
   );
 }
