@@ -2,6 +2,7 @@ import * as React from 'react';
 import PersistentDrawerLeft from '../components/sidenav';
 import MediaCard from '../components/flipcard';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
+import ResponsiveDialog from '../components/definitiondialog';
 
 const pageStyles = {
   color: '#232129',
@@ -20,7 +21,10 @@ const rightBlurbs = {
   fontSize: '20px',
   color: '#660099',
 };
-
+const wordDef = {
+  fontSize: '20px', 
+  color: '#660099'
+}
 
 const IndexPage = () => {
   return (
@@ -31,11 +35,12 @@ const IndexPage = () => {
         <h2 style={rightBlurbs}>
         A City Challenge is a public engagement model in which city leaders and officials work with residents to identify, design and implement resident-designed solutions to some of the city’s most pressing problems.                                                    
         <h3 style={rightBlurbs}></h3>
-        The goal of a City Challenge is to help a city transition from closed-door to open and collaborative governance, and helps governments and communities co-create implementable solutions to critical local problems in twelve months through a 4-step process. 
+        The goal of a City Challenge is to help a city transition from closed-door to open and <ResponsiveDialog props={{word: 'collaborative governance', def: 'A process involving state and non-state actors jointly addressing an issue.'}} textStyles={wordDef}></ResponsiveDialog>, and helps governments and communities <ResponsiveDialog props={{word: 'co-create', def: 'A form of collaborative innovation: ideas are shared and improved together.'}} textStyles={wordDef}></ResponsiveDialog> implementable solutions to critical local problems in twelve months through a 4-step process. 
         <h4 style={rightBlurbs}></h4>
-        Unlike a competition alone, problem definition and coaching ensures that solutions are implementable. And, unlike a database of standard solutions, open innovation daws upon the expertise of the community. 
+        Unlike a competition alone, problem definition and coaching ensures that solutions are implementable. And, unlike a database of standard solutions, <ResponsiveDialog props={{word: 'open innovation', def: 'The process of pooling knowledge and resources with a community of partners to accelerate innovation.'}} textStyles={wordDef}></ResponsiveDialog> daws upon the expertise of the community. 
         </h2>
       </h1>
+
 
       <div classname = 'grid-container-element'>
         <div classname = 'child'>
